@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cadastro de teste (agente)</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 560px;
+        margin: 2rem auto;
+      }
+      label {
+        display: block;
+        margin: 0.6rem 0;
+      }
+      fieldset {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cadastro de teste</h1>
+    <p>
+      Formulário em dois passos para testar o modo agente (digitar, escolher, marcar, avançar,
+      enviar).
+    </p>
+    <form id="cadastro" method="post" action="/agent/result">
+      <fieldset id="passo1">
+        <legend>Passo 1 de 2</legend>
+        <label>Nome <input id="nome" name="nome" /></label>
+        <label>E-mail <input id="email" name="email" type="email" /></label>
+        <label
+          >Estado
+          <select id="estado" name="estado">
+            <option value="">Escolha</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+          </select>
+        </label>
+        <label
+          ><input id="termos" type="checkbox" name="termos" value="sim" /> Aceito os termos</label
+        >
+        <p id="ola" aria-live="polite"></p>
+        <button id="proximo" type="button" disabled>Próximo</button>
+      </fieldset>
+      <fieldset id="passo2" hidden>
+        <legend>Passo 2 de 2</legend>
+        <label>Mensagem <textarea id="mensagem" name="mensagem"></textarea></label>
+        <button type="submit">Enviar cadastro</button>
+      </fieldset>
+    </form>
+    <script>
+      // Imita um formulário "controlado" (como em React): o estado só muda com eventos input/change.
+      const state = { nome: '', email: '', estado: '', termos: false };
+      const $ = (id) => document.getElementById(id);
+      const refresh = () => {
+        $('ola').textContent = state.nome ? `Olá, ${state.nome}!` : '';
+        $('proximo').disabled = !(state.nome && state.email && state.estado && state.termos);
+      };
+      $('nome').addEventListener('input', (e) => ((state.nome = e.target.value), refresh()));
+      $('email').addEventListener('input', (e) => ((state.email = e.target.value), refresh()));
+      $('estado').addEventListener('change', (e) => ((state.estado = e.target.value), refresh()));
+      $('termos').addEventListener('change', (e) => ((state.termos = e.target.checked), refresh()));
+      $('proximo').addEventListener('click', () => {
+        $('passo1').hidden = true;
+        $('passo2').hidden = false;
+      });
+    </script>
+  </body>
+</html>

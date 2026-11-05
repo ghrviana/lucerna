@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="22" fill="#1B2A3A"/>
+  <!-- corpo + bico, uma peca so (sem alca, sem detalhe fino, para legibilidade a 16/32px) -->
+  <rect x="12" y="78" width="68" height="38" rx="19" fill="#FFF8EC"/>
+  <path d="M60,82 L108,58 L64,110 Z" fill="#FFF8EC"/>
+  <!-- chama externa -->
+  <path d="M98,8 C84,26 74,40 74,54 C74,70 84,82 98,82 C112,82 122,70 122,54 C122,40 112,26 98,8 Z" fill="#F5A524"/>
+  <!-- chama interna -->
+  <path d="M98,30 C89,41 84,48 84,56 C84,66 90,74 98,74 C106,74 112,66 112,56 C112,48 107,41 98,30 Z" fill="#FFD166"/>
+</svg>

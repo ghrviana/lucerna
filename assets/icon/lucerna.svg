@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="22" fill="#1B2A3A"/>
+  <!-- corpo da lucerna -->
+  <ellipse cx="56" cy="86" rx="27" ry="15" fill="#FFF8EC"/>
+  <!-- alca: anel fechado -->
+  <path d="M38,86 A14,14 0 1,0 10,86 A14,14 0 1,0 38,86 Z M30,86 A6,6 0 1,0 18,86 A6,6 0 1,0 30,86 Z" fill="#FFF8EC" fill-rule="evenodd"/>
+  <!-- bico -->
+  <path d="M78,74 L72,94 L106,58 Z" fill="#FFF8EC"/>
+  <!-- chama externa -->
+  <path d="M106,16 C96,29 90,40 90,50 C90,60 97,68 106,68 C115,68 122,60 122,50 C122,40 116,29 106,16 Z" fill="#F5A524"/>
+  <!-- chama interna -->
+  <path d="M106,31 C100,39 97,45 97,51 C97,58 101,62 106,62 C111,62 115,58 115,51 C115,45 112,39 106,31 Z" fill="#FFD166"/>
+</svg>

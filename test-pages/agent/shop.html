@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Loja de teste (agente)</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 560px;
+        margin: 2rem auto;
+      }
+      button {
+        margin-right: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Loja de teste</h1>
+    <section>
+      <h2>Notebook Alfa 14</h2>
+      <p>R$ 4.200,00 · 16 GB de memória</p>
+      <button id="add">Adicionar ao carrinho</button>
+      <button id="buy">Finalizar compra</button>
+      <p id="cart" aria-live="polite">Carrinho: 0 itens</p>
+      <p id="status" aria-live="polite"></p>
+    </section>
+    <script>
+      let items = 0;
+      document.getElementById('add').addEventListener('click', () => {
+        items += 1;
+        document.getElementById('cart').textContent = `Carrinho: ${items} item(ns)`;
+      });
+      document.getElementById('buy').addEventListener('click', () => {
+        document.getElementById('status').textContent = items
+          ? 'Pedido realizado! (compra fictícia)'
+          : 'Seu carrinho está vazio.';
+      });
+    </script>
+  </body>
+</html>

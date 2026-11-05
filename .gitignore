@@ -1,0 +1,14 @@
+node_modules
+.output
+.wxt
+CLAUDE.md
+PROJECT.md
+PROGRESS.md
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+web-ext.config.ts
+test-results
+playwright-report
