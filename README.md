@@ -10,6 +10,10 @@ Funciona com a [DeepSeek](https://api-docs.deepseek.com) por padrão, e opcional
 provedor compatível com a API de chat da OpenAI (ex.: a própria OpenAI). **Você usa a sua própria
 chave de API** — a Lucerna não tem servidor, conta de usuário nem cobra nada.
 
+**Compatibilidade:** funciona em qualquer sistema operacional onde o Chrome (ou outro navegador
+baseado em Chromium: Edge, Brave, Opera...) rode — Windows, Linux e macOS igualmente. É uma extensão
+de navegador comum (HTML/CSS/JS/TS), sem nenhum componente nativo específico de sistema.
+
 > **Projeto pessoal, distribuído sem garantias.** Não está na Chrome Web Store — é compartilhado
 > direto pelo GitHub, pra quem quiser usar por conta e risco própria. Sem suporte formal; issues e
 > PRs são bem-vindos, mas não há compromisso de resposta.
